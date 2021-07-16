@@ -42,15 +42,15 @@ FUZZING_BUILD = "LIB_FUZZING_ENGINE" in os.environ
 if sys.platform == "win32" and sys.version_info >= (3, 11):
     import atexit
 
-    atexit.register(
-        lambda: warnings.warn(
-            f"Pillow {PILLOW_VERSION} does not support Python "
-            f"{sys.version_info.major}.{sys.version_info.minor} and does not provide "
-            "prebuilt Windows binaries. We do not recommend building from source on "
-            "Windows.",
-            RuntimeWarning,
-        )
-    )
+    #atexit.register(
+    #    lambda: warnings.warn(
+    #        f"Pillow {PILLOW_VERSION} does not support Python "
+    #        f"{sys.version_info.major}.{sys.version_info.minor} and does not provide "
+    #        "prebuilt Windows binaries. We do not recommend building from source on "
+    #        "Windows.",
+    #        RuntimeWarning,
+    #    )
+    #)
 
 
 _IMAGING = ("decode", "encode", "map", "display", "outline", "path")
